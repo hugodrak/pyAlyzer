@@ -1,0 +1,309 @@
+VERSION "HIPBNYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY/4/%%%/4/'%**4YYY///"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: TECU
+VAL_TABLE_ previewTypeValues 7 "Map data NA-fallback" 6 "Map data in use not reliable " 5 "Map data come back " 4 "Map data not available " 3 "Map data in use" 2 "Extended I SEE" 1 "Base I SEE" 0 "No I SEE" ;
+VAL_TABLE_ previewControlValues 14 "Schwung" 12 "Prebrake" 11 "Roll after crest" 10 "Crest roll" 1 "Preengage" 9 "Roll before crest " 7 "Crest acceleration limit" 4 "Hill management" 2 "Prespeed" ;
+VAL_TABLE_ adasisReconstructorReturnCode 7 "NA" 6 "NA" 5 "NA" 4 "InternalError" 3 "OutOfMemory" 2 "NotSupported" 1 "Fail" 0 "Ok" ;
+VAL_TABLE_ softTrqLimSrc 2 "Mass-based dynamic torque" 1 "Comfort torque limiter (US)" 0 "None" ;
+VAL_TABLE_ systemMode 7 "LimpHome" 6 "Test" 5 "NotCalibrated" 4 "NoDataset" 3 "PowerDown" 2 "PowerUp" 1 "Normal" 0 "Undefined" ;
+VAL_TABLE_ tractionModeValues 7 "wheelLockedAWD" 6 "wheelLocked" 5 "afterSpinning" 4 "spinning" 3 "noSpeedReliable" 2 "dynamometer" 1 "turning" 0 "normal" ;
+VAL_TABLE_ shiftStatusValues 17 "down_UpshiftUphill" 16 "up_DownshiftUphill" 15 "up_LowAccButAboveAccLimit" 14 "down_SeqOK" 13 "down_ShortTimeUntilUpshift" 12 "down_LowSpeedButHighAcc" 11 "down_LongTimeToAcc" 10 "down_ShortTimeUntilNextDownshift" 9 "down_BelowMinSpeed" 8 "down_ShiftPointNotReached" 7 "up_SeqOK" 6 "up_ShortTimeUntilDownshift" 5 "up_JustBelowMinSpeed" 4 "up_LowAcc" 3 "up_ShortTimeUntilNextUpshift" 2 "up_BelowMinSpeed" 1 "up_ShiftPointNotReached" 0 "SeqNotPossible" ;
+VAL_TABLE_ extShiftReqValues 12 "engRetMinSpeedDownshift" 10 "lowSpeedHighTorqueRequest" 11 "stalkUpshiftRequest" 9 "zeroPedalEntryDownshift" 7 "accelerationGearTrigger" 6 "absActAndHighInpShaftSpdUpshift" 5 "downshiftUnderBrakeModeRequest" 4 "RetarderDownshiftRequest" 3 "ExtraBrakeTorqueDownshiftRequest" 2 "StalkDownShiftRequest" 1 "Pedal release & eco-roll exit" 0 "NoRequest" ;
+VAL_TABLE_ gearSelectionStateValues 70 "Dynamometer" 60 "PTO Hold gear" 54 "Auto neutral" 53 "Splitbox PTO (HR) engine running" 52 "Splitbox PTO (HS) engine shtdwn" 51 "GbxPto Not Moving" 50 "GbxPto moving" 45 "Not calibrated" 41 "L" 40 "Power up mode" 37 "Faulty gearbox in B" 36 "Faulty gbx in N, F, R, M, (A)" 34 "Backup in A" 29 "Undefined gearlever pos" 27 "Rolling backwards in M" 26 "Rolling backwards in A" 25 "N or F" 24 "Not moving in R" 23 "Not moving in M" 22 "Rolling forward in R" 21 "Moving backwards in R" 19 "Shifting" 18 "Eco roll" 16 "Engine Braking" 14 "Hold gear" 12 "Idle driving" 10 "Entry/DirectShift" 9 "Pedal Shifting" 6 "Pedal Gear Selection PS" 5 "Not moving in A" 4 "Pedal Gear Selection" 3 "Prediction ok" 2 "Prediction not ok" 1 "Normal idle" ;
+VAL_TABLE_ externalInputStatusValues 50 "GPSQf = 15 and gps enabled" 42 "Rollerbench inclin/mass active" 41 "OD/DD error" 28 "AcctrlPedKickDwnSw_stat missing" 27 "TrailerConnected missing" 26 "AcceleratorPedalPos1 missing" 25 "BrakeSwitch missing" 24 "BrakePedalPosition missing" 23 "WheelBasedVehicleSpeed missing" 22 "Kfactor missing" 21 "Kfactor wrong" 14 "AntiLockBrakingActive missing" 13 "FrAxleRightWheelRelSpeed missing" 12 "FrAxleLeftWheelRelSpeed missing" 11 "FrontAxleSpeed missing" 5 "VCB during shift not working" 4 "Eng speed signal missing BB1" 3 "Eng speed signal missing ptCan" 2 "Eng config error BB1" 1 "Eng config error ptCan" ;
+VAL_TABLE_ driverOverrideModeValues 5 "IdleDownshift" 4 "InhibitDownshift" 3 "InhibitUpshift" 2 "Downshift" 1 "Upshift" 0 "Normalshift" ;
+
+
+BO_ 2634019096 Debug_1_TECU: 8 Vector__XXX
+ SG_ debug_rollerBenchMass : 8|8@1+ (1000,0) [0|100000] "kg" Vector__XXX
+ SG_ debug_rollerBenchInclination : 0|8@1+ (0.2,-25) [-25|25] "%" Vector__XXX
+
+BO_ 2634015256 Debug_2_TECU: 8 TECU
+ SG_ debug_clutch1Load : 0|8@1+ (4,0) [0|1020] "kJ" Vector__XXX
+ SG_ debug_clutch2Load : 8|8@1+ (4,0) [0|1020] "kJ" Vector__XXX
+ SG_ debug_clutch1VaPwm : 16|9@1+ (1,-250) [-250|261] "%" Vector__XXX
+ SG_ debug_clutch2VaPwm : 25|9@1+ (1,-250) [-250|261] "%" Vector__XXX
+ SG_ debug_clutch1PosRaw : 34|10@1+ (0.05,-10) [-10|41.15] "mm" Vector__XXX
+ SG_ debug_clutch2PosRaw : 44|10@1+ (0.05,-10) [-10|41.15] "mm" Vector__XXX
+ SG_ debug_clutch1Pos : 54|10@1+ (0.05,-10) [-10|41.15] "mm" Vector__XXX
+
+BO_ 2634015512 Debug_3_TECU: 8 TECU
+ SG_ debug_clutch2Pos : 0|10@1+ (0.05,-10) [-10|41.15] "mm" Vector__XXX
+ SG_ debug_clutch1TorqueCapacity : 10|9@1+ (10,-10) [-10|5100] "Nm" Vector__XXX
+ SG_ debug_clutch2TorqueCapacity : 19|9@1+ (10,-10) [-10|5100] "Nm" Vector__XXX
+ SG_ debug_clutch1CtrlReqTorqueCapaci : 28|9@1+ (10,-10) [-10|5100] "Nm" Vector__XXX
+ SG_ debug_clutch2CtrlReqTorqueCapaci : 37|9@1+ (10,-10) [-10|5100] "Nm" Vector__XXX
+ SG_ debug_clutch1CtrlReqPressure : 46|9@1+ (1.5,-10) [-10|756.5] "kPa" Vector__XXX
+ SG_ debug_clutch2CtrlReqPressure : 55|9@1+ (1.5,-10) [-10|756.5] "kPa" Vector__XXX
+
+BO_ 2634015768 Debug_4_TECU: 8 TECU
+ SG_ debug_inputSpeedSign : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ debug_extShiftReq : 59|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ debug_clutch1CtrlReqPos : 0|10@1+ (0.05,-10) [-10|41.15] "mm" Vector__XXX
+ SG_ debug_clutch2CtrlReqPos : 10|10@1+ (0.05,-10) [-10|41.15] "mm" Vector__XXX
+ SG_ debug_calcEstimatedClutchTorque : 20|9@1+ (10,-1000) [-1000|4110] "Nm" Vector__XXX
+ SG_ debug_engTorqueNmDyn : 29|9@1+ (10,-1000) [-1000|4110] "Nm" Vector__XXX
+ SG_ debug_clutch1Pressure : 38|9@1+ (1.5,-10) [-10|756.5] "kPa" Vector__XXX
+ SG_ debug_clutch2Pressure : 47|9@1+ (1.5,-10) [-10|756.5] "kPa" Vector__XXX
+ SG_ debug_calcTorqueEstState : 56|3@1+ (1,0) [0|7] "-" Vector__XXX
+
+BO_ 2634016024 Debug_5_TECU: 8 TECU
+ SG_ debug_clutchCharacteristics : 0|10@1+ (0.05,0) [0|51.15] "-" Vector__XXX
+ SG_ debug_startSpeedCtrlSetpointSpee : 10|10@1+ (1,500) [500|1523] "rpm" Vector__XXX
+ SG_ debug_gbxVag1 : 20|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ debug_gbxVag2 : 22|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ debug_gbxVag3 : 24|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ debug_gbxVagR : 26|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ debug_gbxVag2PS : 28|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ debug_gbxVag2NPS : 30|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ debug_gbxVag3PS : 32|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ debug_gbxVag3NPS : 34|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ debug_gbxVac : 36|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ debug_gbxVacN : 38|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ debug_gbxVacfcr : 40|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ debug_gbxVacfn : 42|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ debug_gbxVacrn : 44|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ debug_gbxVasyf : 46|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ debug_gbxVasyr : 48|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ debug_gbxValr : 50|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ debug_gbxVahr : 52|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ debug_gbxVaids : 54|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ debug_gbxVads : 56|2@1+ (1,0) [0|3] "-" Vector__XXX
+
+BO_ 2634016280 Debug_6_TECU: 8 TECU
+ SG_ debug_gbxVagb : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ debug_gbxPosCylSplit_PS3 : 8|8@1+ (0.2,0) [0|51] "mm" Vector__XXX
+ SG_ debug_gbxPosCylRange : 16|8@1+ (0.2,0) [0|51] "mm" Vector__XXX
+ SG_ debug_gbxPosCyl1R : 24|8@1+ (0.2,0) [0|51] "mm" Vector__XXX
+ SG_ debug_gbxPosCyl23_PS2 : 32|8@1+ (0.2,0) [0|51] "mm" Vector__XXX
+ SG_ debug_gbxPosCylCF : 40|8@1+ (0.2,0) [0|51] "mm" Vector__XXX
+ SG_ debug_gbxPosCylCR : 48|8@1+ (0.2,0) [0|51] "mm" Vector__XXX
+ SG_ debug_gbxPosCylC : 56|8@1+ (0.2,0) [0|51] "mm" Vector__XXX
+
+BO_ 2634016536 Debug_7_TECU: 8 TECU
+ SG_ debug_backlash : 54|2@1+ (1,-1) [-1|2] "" Vector__XXX
+ SG_ debug_outputSpeedSign : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ debug_gearShiftingState : 0|10@1+ (1,0) [0|1023] "-" Vector__XXX
+ SG_ debug_gbxMainSpeed : 10|13@1+ (1,-4000) [-4000|4191] "rpm" Vector__XXX
+ SG_ debug_gbxCounterSpeed : 23|13@1+ (1,-4000) [-4000|4191] "rpm" Vector__XXX
+ SG_ debug_gbxCounterSpeedP1 : 36|13@1+ (1,-4000) [-4000|4191] "rpm" Vector__XXX
+ SG_ debug_ExternallyTriggeredGear : 49|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ debug_inclination : 56|8@1+ (0.2,-25) [-25|26] "%" Vector__XXX
+
+BO_ 2634016792 Debug_8_TECU: 8 TECU
+ SG_ debug_syncSpeed : 0|10@1+ (2.5,0) [0|2557.5] "rpm" Vector__XXX
+ SG_ debug_currGbxState : 10|8@1+ (1,-6) [-6|249] "-" Vector__XXX
+ SG_ debug_inputSpeedInactive : 18|13@1+ (1,-4000) [-4000|4191] "rpm" Vector__XXX
+ SG_ debug_selGbxState : 31|8@1+ (1,-6) [-6|249] "-" Vector__XXX
+ SG_ debug_inputShaftSpeedGearSel : 39|13@1+ (1,-4000) [-4000|4191] "rpm" Vector__XXX
+ SG_ debug_nextGearShiftSpeed : 52|12@1+ (1,0) [0|4095] "rpm" Vector__XXX
+
+BO_ 2634017048 Debug_9_TECU: 8 TECU
+ SG_ debug_NextGear : 0|6@1+ (1,-6) [-6|57] "-" Vector__XXX
+ SG_ debug_hybMaxRegenGearOffset : 6|3@1+ (1,-3) [-3|4] "-" Vector__XXX
+ SG_ debug_driverOverrideMode : 9|3@1+ (1,0) [0|7] "-" Vector__XXX
+ SG_ debug_gearSelectionState : 12|8@1+ (1,0) [0|255] "-" Vector__XXX
+ SG_ debug_engRetTorqueEffective : 20|10@1+ (10,-3000) [-3000|7230] "rpm" Vector__XXX
+ SG_ debug_pwtCtrlDrivelineStateDrivi : 30|1@1+ (1,0) [0|1] "-" Vector__XXX
+ SG_ debug_inputSpeedWheel : 31|13@1+ (1,-4000) [-4000|4191] "rpm" Vector__XXX
+ SG_ debug_inputSpeedOutput : 44|13@1+ (1,-4000) [-4000|4191] "rpm" Vector__XXX
+ SG_ debug_previewPathId : 57|6@1+ (1,0) [0|63] "-" Vector__XXX
+
+BO_ 2634017304 Debug_10_TECU: 8 TECU
+ SG_ debug_gbxMainSpeedHighRes : 52|12@1+ (1,-1000) [-1000|3096] "rpm" Vector__XXX
+ SG_ debug_startPedal : 9|7@1+ (1,0) [0|127] "%" Vector__XXX
+ SG_ debug_adasisReconstructrReturnCo : 49|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ debug_eqGradeExtrapolated : 0|8@1+ (0.2,-25) [-25|26] "%" Vector__XXX
+ SG_ debug_activateLogging : 8|1@1+ (1,0) [0|1] "-" Vector__XXX
+ SG_ debug_engAcc : 17|9@1+ (8,-2000) [-2000|2088] "rpm/s" Vector__XXX
+ SG_ debug_engTorque : 26|12@1+ (1.25,-1500) [-1500|3618.75] "Nm" Vector__XXX
+ SG_ debug_engTorqueLoss : 38|11@1+ (0.05,0) [0|102.35] "%" Vector__XXX
+
+BO_ 2634017560 Debug_11_TECU: 8 TECU
+ SG_ debug_shiftPerfEvaluationIndex : 59|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ debug_shiftPerfEvaluation : 49|10@1+ (1,0) [0|1024] "" Vector__XXX
+ SG_ debug_PredForShiftWithFullPedal : 31|5@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ debug_PredForShiftWithExtrap : 36|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ debug_PredFor3StepShift : 26|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ debug_PredFor2StepShift : 21|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ debug_PredFor1StepShift : 16|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ debug_pcotPred : 0|8@1+ (0.02,0) [0|5.1] "s" Vector__XXX
+ SG_ debug_pcotMeas : 8|8@1+ (0.02,0) [0|5.1] "s" Vector__XXX
+ SG_ debug_eqGradeTrailerActive : 48|1@1+ (1,0) [0|1] "-" Vector__XXX
+ SG_ debug_KickdownGear : 41|3@1+ (7,0) [7|14] "-" Vector__XXX
+ SG_ debug_StartGearFromClutchEnergy : 44|4@1+ (1,0) [0|15] "-" Vector__XXX
+
+BO_ 2634017816 Debug_12_TECU: 8 TECU
+ SG_ debug_softTrqLimSrc : 61|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ debug_nextGearSpeedAfterShiftLow : 0|12@1+ (1,0) [0|4095] "rpm" Vector__XXX
+ SG_ debug_TractiveGear : 12|10@1+ (0.014,1) [1|15.322] "-" Vector__XXX
+ SG_ debug_ResistiveGear : 22|10@1+ (0.014,1) [1|15.322] "-" Vector__XXX
+ SG_ debug_IdleDrivingGear : 32|3@1+ (1,0) [0|7] "-" Vector__XXX
+ SG_ debug_MinDriveabilityGear : 35|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ debug_minDriveability : 39|12@1+ (1,0) [0|4095] "rpm" Vector__XXX
+ SG_ debug_BrakeProgramGear : 51|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ debug_brakeInterlockMode : 55|3@1+ (1,0) [0|7] "-" Vector__XXX
+ SG_ debug_eqTrailerConnected : 58|3@1+ (1,0) [0|7] "-" Vector__XXX
+
+BO_ 2634018072 Debug_13_TECU: 8 TECU
+ SG_ debug_predAcceleration10 : 0|8@1+ (3,-100) [-100|665] "rpm" Vector__XXX
+ SG_ debug_predAcceleration20 : 8|8@1+ (3,-100) [-100|665] "rpm" Vector__XXX
+ SG_ debug_vehicleAcc : 16|10@1+ (0.02,-10) [-10|10.46] "m/s2" Vector__XXX
+ SG_ debug_eqAccPedal : 26|7@1+ (1,0) [0|127] "%" Vector__XXX
+ SG_ debug_driverWish : 33|7@1+ (1,0) [0|127] "%" Vector__XXX
+ SG_ debug_tractionMode : 40|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ debug_externalInputStatus : 44|7@1+ (1,0) [0|127] "-" Vector__XXX
+ SG_ debug_isManualModeEscActive : 51|1@1+ (1,0) [0|1] "-" Vector__XXX
+ SG_ debug_predShiftSpeed10 : 52|12@1+ (1,0) [0|4095] "rpm" Vector__XXX
+
+BO_ 2634018328 Debug_14_TECU: 8 TECU
+ SG_ debug_predShiftSpeed20 : 0|12@1+ (1,0) [0|4095] "rpm" Vector__XXX
+ SG_ debug_inputAccActive : 12|1@1+ (1,0) [0|1] "-" Vector__XXX
+ SG_ debug_inputAsrActive : 13|1@1+ (1,0) [0|1] "-" Vector__XXX
+ SG_ debug_massCalc : 14|10@1+ (0.2,0) [0|204.6] "ton" Vector__XXX
+ SG_ debug_mass : 24|10@1+ (0.2,0) [0|204.6] "ton" Vector__XXX
+ SG_ debug_massAlgo : 34|10@1+ (0.2,0) [0|204.6] "ton" Vector__XXX
+ SG_ debug_massInit : 44|10@1+ (0.2,0) [0|204.6] "ton" Vector__XXX
+ SG_ debug_massInitHoldValue : 54|10@1+ (0.2,0) [0|204.6] "ton" Vector__XXX
+
+BO_ 2634018584 Debug_15_TECU: 8 TECU
+ SG_ debug_PropShaftTorqueEffLimit : 40|8@1+ (20,0) [0|5100] "Nm" Vector__XXX
+ SG_ debug_massInitConf : 0|4@1+ (0.1,0) [0|1.5] "-" Vector__XXX
+ SG_ debug_massAlgoConf : 4|4@1+ (0.1,0) [0|1.5] "ton" Vector__XXX
+ SG_ debug_nrOfMassAlgoValues : 8|8@1+ (1,0) [0|255] "-" Vector__XXX
+ SG_ debug_massResetStateDebug : 16|3@1+ (1,0) [0|7] "-" Vector__XXX
+ SG_ debug_useNvMass : 19|1@1+ (1,0) [0|1] "-" Vector__XXX
+ SG_ debug_previewControl : 20|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ debug_previewMinEngSpeedOnCurrGe : 24|9@1+ (4,0) [0|2044] "rpm" Vector__XXX
+ SG_ debug_previewIndex : 33|7@1+ (1,0) [0|127] "-" Vector__XXX
+ SG_ debug_previewMaxSpeedRolling : 48|8@1+ (0.25,60) [60|123.75] "-" Vector__XXX
+ SG_ debug_previewMaxSpeedFullRet : 56|8@1+ (0.25,60) [60|123.75] "-" Vector__XXX
+
+BO_ 2634019352 Debug_16_TECU: 8 TECU
+ SG_ debug_UseKalmanRollResistance : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ debug_UseKalmanMass : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ debug_PreviewCalcTimeOverCCB : 55|7@1+ (1,0) [0|127] "s" Vector__XXX
+ SG_ debug_previewNrOfHillIndices : 0|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ debug_previewEqCrestSpeed : 2|8@1+ (0.25,50) [50|113.75] "km/h" Vector__XXX
+ SG_ debug_previewCurrInclination : 10|7@1+ (0.2,-12.6) [-12.6|12.8] "%" Vector__XXX
+ SG_ debug_previewAvailable : 17|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ debug_previewGearRequest : 19|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ debug_previewIndexEqCrest : 23|7@1+ (1,0) [0|127] "-" Vector__XXX
+ SG_ debug_previewIndexEqEnd : 30|7@1+ (1,0) [0|127] "-" Vector__XXX
+ SG_ debug_previewIndexRetMaxTorque : 37|7@1+ (1,0) [0|127] "-" Vector__XXX
+ SG_ debug_previewIndexAccMaxTorque : 44|7@1+ (1,0) [0|127] "-" Vector__XXX
+ SG_ debug_StartGear : 51|4@1+ (1,0) [0|15] "-" Vector__XXX
+
+BO_ 2634019608 Debug_17_TECU: 8 TECU
+ SG_ debug_previewInternalPBstate : 60|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ debug_previewType : 57|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ debug_previewRetMaxTrqHigherGear : 50|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ debug_previewAccMaxTrqHigherGear : 43|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ debug_predShiftSpeedInputData : 31|12@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ debug_KalmanMass : 17|10@1+ (0.2,0) [0|204.6] "ton" Vector__XXX
+ SG_ debug_maxCpuLoad : 0|7@1+ (0.5,37) [37|100.5] "%" Vector__XXX
+ SG_ debug_vehNvDrivelineCharValue : 7|10@1+ (1,0) [0|1023] "-" Vector__XXX
+
+BO_ 2634019864 Debug_18_TECU: 7 TECU
+ SG_ debug_previewCurrspeedlimit : 51|4@1+ (10,0) [0|150] "km/h" Vector__XXX
+ SG_ debug_gbxInPcbTemp : 0|8@1+ (1,-40) [-40|215] "-" Vector__XXX
+ SG_ debug_previewIndexHorizon : 8|8@1+ (1,0) [0|255] "-" Vector__XXX
+ SG_ debug_previewIndexValley : 16|7@1+ (1,0) [0|127] "-" Vector__XXX
+ SG_ debug_previewIndexCrest : 23|7@1+ (1,0) [0|127] "-" Vector__XXX
+ SG_ debug_previewLastHillSaved : 55|1@1+ (1,0) [0|1] "-" Vector__XXX
+ SG_ debug_partNumber : 30|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ debug_ratioThruRadius : 34|10@1+ (0.01,0) [0|10.23] "1/m" Vector__XXX
+ SG_ debug_engMaxTorque : 44|7@1+ (20,800) [800|3340] "Nm" Vector__XXX
+
+BO_ 2634020120 Debug_19_TECU: 8 TECU
+ SG_ debug_inclinationOffset : 0|8@1+ (0.1,-10) [-10|15.5] "%" Vector__XXX
+ SG_ debug_speedCorrFactorError : 8|6@1+ (1,-30) [-30|33] "%" Vector__XXX
+ SG_ debug_gbxAirPressure : 14|7@1+ (10,0) [0|1270] "kPa" Vector__XXX
+ SG_ debug_gbxTempOil : 21|8@1+ (1,-40) [-40|215] "ºC" Vector__XXX
+ SG_ debug_vehNvInclinationDistance : 29|14@1+ (1,-40) [-40|16343] "km" Vector__XXX
+ SG_ debug_inclinationIsGpsCalibrated : 43|1@1+ (1,0) [0|1] "-" Vector__XXX
+ SG_ debug_supply24V : 44|1@1+ (1,0) [0|1] "-" Vector__XXX
+ SG_ debug_cpuStackUsedPercent : 45|8@1+ (1,0) [0|255] "%" Vector__XXX
+
+BO_ 2634020376 Debug_20_TECU: 7 TECU
+ SG_ debug_PreviewDistGainedOnLeadVeh : 44|7@1+ (1,0) [0|127] "m" Vector__XXX
+ SG_ debug_ShiftSpeedHysteresis : 32|12@1+ (1,0) [0|4095] "rpm" Vector__XXX
+ SG_ debug_PedalEntryGear : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ debug_PredForPowershift : 23|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ debug_ModeledEqGrade : 15|8@1+ (0.2,-25) [-25|26] "%" Vector__XXX
+ SG_ debug_DerivedEqGrade : 7|8@1+ (0.2,-25) [-25|26] "%" Vector__XXX
+ SG_ debug_GearSelectionTargetSpeed : 0|7@1+ (1,0) [0|127] "km/h" Vector__XXX
+
+BO_ 2634020632 Debug_21_TECU: 2 TECU
+ SG_ debug_AirResistanceCoeff : 7|7@1+ (0.2,0) [0|25.5] "" Vector__XXX
+ SG_ debug_RollResistance : 0|7@1+ (0.01,0) [0|1.27] "" Vector__XXX
+
+
+
+CM_ SG_ 2634017560 debug_PredForShiftWithFullPedal "Predicted outcome of a single upshift, assuming full pedal after the shift.";
+CM_ SG_ 2634017560 debug_PredForShiftWithExtrap "Predicted outcome of a single downshift, assuming that the slope keeps increasing.";
+CM_ SG_ 2634017560 debug_PredFor3StepShift "Predicted outcome of a two-skip upshift/downshift.";
+CM_ SG_ 2634017560 debug_PredFor2StepShift "Predicted outcome of a one-skip upshift/downshift.";
+CM_ SG_ 2634017560 debug_PredFor1StepShift "Predicted outcome of a single upshift/downshift.";
+CM_ SG_ 2634017816 debug_softTrqLimSrc "Indicates the source function behind a low priority torque limit request.";
+CM_ SG_ 2634020376 debug_PredForPowershift "Predicted outcome of a powershift. Only available on the AMT-PS.";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "SystemSignalLongSymbol" "";
+BA_ "BusType" "CAN";
+BA_ "SystemSignalLongSymbol" SG_ 2634015512 debug_clutch1CtrlReqTorqueCapaci "debug_clutch1CtrlReqTorqueCapacity";
+BA_ "SystemSignalLongSymbol" SG_ 2634015512 debug_clutch2CtrlReqTorqueCapaci "debug_clutch2CtrlReqTorqueCapacity";
+BA_ "SystemSignalLongSymbol" SG_ 2634016024 debug_startSpeedCtrlSetpointSpee "debug_startSpeedCtrlSetpointSpeed";
+BA_ "SystemSignalLongSymbol" SG_ 2634017048 debug_pwtCtrlDrivelineStateDrivi "debug_pwtCtrlDrivelineStateDriving";
+BA_ "SystemSignalLongSymbol" SG_ 2634017304 debug_adasisReconstructrReturnCo "debug_adasisReconstructrReturnCode";
+BA_ "SystemSignalLongSymbol" SG_ 2634017816 debug_nextGearSpeedAfterShiftLow "debug_nextGearSpeedAfterShiftLowest";
+BA_ "SystemSignalLongSymbol" SG_ 2634018584 debug_previewMinEngSpeedOnCurrGe "debug_previewMinEngSpeedOnCurrGear";
+VAL_ 2634015768 debug_extShiftReq 12 "engRetMinSpeedDownshift" 10 "lowSpeedHighTorqueRequest" 11 "stalkUpshiftRequest" 9 "zeroPedalEntryDownshift" 7 "accelerationGearTrigger" 6 "absActAndHighInpShaftSpdUpshift" 5 "downshiftUnderBrakeModeRequest" 4 "RetarderDownshiftRequest" 3 "ExtraBrakeTorqueDownshiftRequest" 2 "StalkDownShiftRequest" 1 "Pedal release & eco-roll exit" 0 "NoRequest" ;
+VAL_ 2634017048 debug_driverOverrideMode 5 "IdleDownshift" 4 "InhibitDownshift" 3 "InhibitUpshift" 2 "Downshift" 1 "Upshift" 0 "Normalshift" ;
+VAL_ 2634017048 debug_gearSelectionState 70 "Dynamometer" 60 "PTO Hold gear" 54 "Auto neutral" 53 "Splitbox PTO (HR) engine running" 52 "Splitbox PTO (HS) engine shtdwn" 51 "GbxPto Not Moving" 50 "GbxPto moving" 45 "Not calibrated" 41 "L" 40 "Power up mode" 37 "Faulty gearbox in B" 36 "Faulty gbx in N, F, R, M, (A)" 34 "Backup in A" 29 "Undefined gearlever pos" 27 "Rolling backwards in M" 26 "Rolling backwards in A" 25 "N or F" 24 "Not moving in R" 23 "Not moving in M" 22 "Rolling forward in R" 21 "Moving backwards in R" 19 "Shifting" 18 "Eco roll" 16 "Engine Braking" 14 "Hold gear" 12 "Idle driving" 10 "Entry/DirectShift" 9 "Pedal Shifting" 6 "Pedal Gear Selection PS" 5 "Not moving in A" 4 "Pedal Gear Selection" 3 "Prediction ok" 2 "Prediction not ok" 1 "Normal idle" ;
+VAL_ 2634017304 debug_adasisReconstructrReturnCo 7 "NA" 6 "NA" 5 "NA" 4 "InternalError" 3 "OutOfMemory" 2 "NotSupported" 1 "Fail" 0 "Ok" ;
+VAL_ 2634017560 debug_PredForShiftWithFullPedal 17 "down_UpshiftUphill" 16 "up_DownshiftUphill" 15 "up_LowAccButAboveAccLimit" 14 "down_SeqOK" 13 "down_ShortTimeUntilUpshift" 12 "down_LowSpeedButHighAcc" 11 "down_LongTimeToAcc" 10 "down_ShortTimeUntilNextDownshift" 9 "down_BelowMinSpeed" 8 "down_ShiftPointNotReached" 7 "up_SeqOK" 6 "up_ShortTimeUntilDownshift" 5 "up_JustBelowMinSpeed" 4 "up_LowAcc" 3 "up_ShortTimeUntilNextUpshift" 2 "up_BelowMinSpeed" 1 "up_ShiftPointNotReached" 0 "SeqNotPossible" ;
+VAL_ 2634017560 debug_PredForShiftWithExtrap 17 "down_UpshiftUphill" 16 "up_DownshiftUphill" 15 "up_LowAccButAboveAccLimit" 14 "down_SeqOK" 13 "down_ShortTimeUntilUpshift" 12 "down_LowSpeedButHighAcc" 11 "down_LongTimeToAcc" 10 "down_ShortTimeUntilNextDownshift" 9 "down_BelowMinSpeed" 8 "down_ShiftPointNotReached" 7 "up_SeqOK" 6 "up_ShortTimeUntilDownshift" 5 "up_JustBelowMinSpeed" 4 "up_LowAcc" 3 "up_ShortTimeUntilNextUpshift" 2 "up_BelowMinSpeed" 1 "up_ShiftPointNotReached" 0 "SeqNotPossible" ;
+VAL_ 2634017560 debug_PredFor3StepShift 17 "down_UpshiftUphill" 16 "up_DownshiftUphill" 15 "up_LowAccButAboveAccLimit" 14 "down_SeqOK" 13 "down_ShortTimeUntilUpshift" 12 "down_LowSpeedButHighAcc" 11 "down_LongTimeToAcc" 10 "down_ShortTimeUntilNextDownshift" 9 "down_BelowMinSpeed" 8 "down_ShiftPointNotReached" 7 "up_SeqOK" 6 "up_ShortTimeUntilDownshift" 5 "up_JustBelowMinSpeed" 4 "up_LowAcc" 3 "up_ShortTimeUntilNextUpshift" 2 "up_BelowMinSpeed" 1 "up_ShiftPointNotReached" 0 "SeqNotPossible" ;
+VAL_ 2634017560 debug_PredFor2StepShift 17 "down_UpshiftUphill" 16 "up_DownshiftUphill" 15 "up_LowAccButAboveAccLimit" 14 "down_SeqOK" 13 "down_ShortTimeUntilUpshift" 12 "down_LowSpeedButHighAcc" 11 "down_LongTimeToAcc" 10 "down_ShortTimeUntilNextDownshift" 9 "down_BelowMinSpeed" 8 "down_ShiftPointNotReached" 7 "up_SeqOK" 6 "up_ShortTimeUntilDownshift" 5 "up_JustBelowMinSpeed" 4 "up_LowAcc" 3 "up_ShortTimeUntilNextUpshift" 2 "up_BelowMinSpeed" 1 "up_ShiftPointNotReached" 0 "SeqNotPossible" ;
+VAL_ 2634017560 debug_PredFor1StepShift 17 "down_UpshiftUphill" 16 "up_DownshiftUphill" 15 "up_LowAccButAboveAccLimit" 14 "down_SeqOK" 13 "down_ShortTimeUntilUpshift" 12 "down_LowSpeedButHighAcc" 11 "down_LongTimeToAcc" 10 "down_ShortTimeUntilNextDownshift" 9 "down_BelowMinSpeed" 8 "down_ShiftPointNotReached" 7 "up_SeqOK" 6 "up_ShortTimeUntilDownshift" 5 "up_JustBelowMinSpeed" 4 "up_LowAcc" 3 "up_ShortTimeUntilNextUpshift" 2 "up_BelowMinSpeed" 1 "up_ShiftPointNotReached" 0 "SeqNotPossible" ;
+VAL_ 2634017816 debug_softTrqLimSrc 2 "Mass-based dynamic torque" 1 "Comfort torque limiter (US)" 0 "None" ;
+VAL_ 2634018072 debug_externalInputStatus 50 "GPSQf = 15 and gps enabled" 42 "Rollerbench inclin/mass active" 41 "OD/DD error" 28 "AcctrlPedKickDwnSw_stat missing" 27 "TrailerConnected missing" 26 "AcceleratorPedalPos1 missing" 25 "BrakeSwitch missing" 24 "BrakePedalPosition missing" 23 "WheelBasedVehicleSpeed missing" 22 "Kfactor missing" 21 "Kfactor wrong" 14 "AntiLockBrakingActive missing" 13 "FrAxleRightWheelRelSpeed missing" 12 "FrAxleLeftWheelRelSpeed missing" 11 "FrontAxleSpeed missing" 5 "VCB during shift not working" 4 "Eng speed signal missing BB1" 3 "Eng speed signal missing ptCan" 2 "Eng config error BB1" 1 "Eng config error ptCan" ;
+VAL_ 2634018584 debug_previewControl 13 "Speed decrease roll" 8 "Crest friction" 5 "Pulse and glide" 14 "Schwung" 12 "Prebrake" 11 "Speed increase roll" 10 "Crest roll" 1 "PreEngage" 7 "Crest acceleration limit" 4 "Hill management" 2 "PreSpeed" ;
+VAL_ 2634019608 debug_previewType 7 "Map data NA-fallback" 6 "Map data in use not reliable " 5 "Map data come back " 4 "Map data not available " 3 "Map data in use" 2 "Extended I SEE" 1 "Base I SEE" 0 "No I SEE" ;
+VAL_ 2634020376 debug_PredForPowershift 17 "down_UpshiftUphill" 16 "up_DownshiftUphill" 15 "up_LowAccButAboveAccLimit" 14 "down_SeqOK" 13 "down_ShortTimeUntilUpshift" 12 "down_LowSpeedButHighAcc" 11 "down_LongTimeToAcc" 10 "down_ShortTimeUntilNextDownshift" 9 "down_BelowMinSpeed" 8 "down_ShiftPointNotReached" 7 "up_SeqOK" 6 "up_ShortTimeUntilDownshift" 5 "up_JustBelowMinSpeed" 4 "up_LowAcc" 3 "up_ShortTimeUntilNextUpshift" 2 "up_BelowMinSpeed" 1 "up_ShiftPointNotReached" 0 "SeqNotPossible" ;
+
